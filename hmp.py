@@ -259,7 +259,7 @@ def f1ScoreEnsembleClassifier(X_train, X_test, y_train, y_test, classifiersTuple
 if __name__ == "__main__":
 
     # define general variables:
-    srcDir = r"C:\CodeRug\biometricData\accelerometer\humanmotionprimitives\data"
+    srcDir = r"C:\CodeRug\biometricData\accelerometer\humanMotionPrimitives\data"
     fs = 32
     
     # get list of classes:
