@@ -1,9 +1,12 @@
-## Detection of Human Activity using Wrist-Accelerometer
+# Detection of Human Activity using Wrist-Accelerometer
 
-Chech out the blog post --> [here](https://ruggerobettinardi.eu/blog/accelerometer-classification/)
 
 ### Aim:
-Develop algorithm to classify accelerometer time series according to the corresponding type of motion / activity
+Develop a classification pipeline to recognize the type of motion / activity from time series accelerometer data.
+
+- Chech out the blog post [here](https://ruggerobettinardi.eu/blog/accelerometer-classification/)
+
+---
 
 ### Dataset Description:
 The Dataset for ADL (Activities of Daily Living) Recognition with Wrist-worn Accelerometer is a public collection of labelled accelerometer data recordings to be used for the creation and validation of supervised acceleration models of simple ADL.
@@ -28,11 +31,15 @@ Model Performance
 
 ---
 
-### Model Performance
+### Results
 
-I will assess the performance of each classifier using the [macro F1-score](https://en.wikipedia.org/wiki/F-score), a metric which summarizes both the precision and the recall (see explanation below): in fact the F1-score is the *harmonic mean* between the two, averaged over all classes to be predicted.
+I will assess the performance of each classifier using the [micro F1-score](https://en.wikipedia.org/wiki/F-score), a metric which summarizes both the precision and the recall  (see *Appendix* below): in fact the F1-score is the *harmonic mean* between the two, averaged over all classes to be predicted. For this particular multilabel classification task, I will use the "micro" F1-score, a way of getting the average F1-score that takes into account possible unbalances between classes. A perfect model has an F1-score of 1.
+1. The first approach (using just a handful of features) yields a micro F1-score of ~0.92 on the test test;
+2. The second approach (using almost 2K features automatically extracted ad selected by tsfresh) yields a micro F1-score of ~0.95 on the test test. 
 
-A perfect model has an F1-score of 1.
+---
+
+### Appendix
 
 - **Precision**:  the fraction of true positive examples among the examples that the model classified as positive. In other words, the number of true positives divided by the number of false positives plus true positives. 
 
@@ -40,16 +47,3 @@ A perfect model has an F1-score of 1.
 - **Recall**: also known as sensitivity, is the fraction of examples classified as positive, among the total number of positive examples. In other words, the number of true positives divided by the number of true positives plus false negatives.
 
 
----
-
-### References
-
-- Bruno, B., Mastrogiovanni, F., Sgorbissa, A., Vernazza, T., Zaccaria, R.:
-Analysis of human behavior recognition algorithms based on acceleration data.
-In: IEEE Int Conf on Robotics and Automation (ICRA),
-pp. 1602--1607 (2013)
-
-- Bruno, B., Mastrogiovanni, F., Sgorbissa, A., Vernazza, T., Zaccaria, R.:
-Human motion modelling and recognition: A computational approach.
-In: IEEE Int Conf on Automation Science and Engineering (CASE),
-pp. 156--161 (2012)
