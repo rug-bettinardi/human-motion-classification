@@ -1,8 +1,12 @@
 ## Detection of Human Activity using Wrist-Accelerometer
 
+Chech out the blog post --> [here](https://ruggerobettinardi.eu/blog/accelerometer-classification/)
 
+### Aim:
+Develop algorithm to classify accelerometer time series according to the corresponding type of motion / activity
+
+### Dataset Description:
 The Dataset for ADL (Activities of Daily Living) Recognition with Wrist-worn Accelerometer is a public collection of labelled accelerometer data recordings to be used for the creation and validation of supervised acceleration models of simple ADL.
-
 
 It can be downloaded from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Dataset+for+ADL+Recognition+with+Wrist-worn+Accelerometer).
 
